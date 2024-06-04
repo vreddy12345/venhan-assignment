@@ -1,24 +1,26 @@
 1. Write a function `is_prime(n: int) -> bool` that checks if a given number is prime. 
-Ans:  def is_prime(n: int) -> bool:
-    
-        if n <= 1:
-            return False
-        if n <= 3:
-            return True
-        if n % 2 == 0 or n % 3 == 0:
-            return False
-        i = 5
-        while i * i <= n:
-            if n % i == 0 or n % (i + 2) == 0:
-                return False
-            i += 6
-        return True
+Ans:  
 
-      # Examples of usage:
-      print(is_prime(2))   # True
-      print(is_prime(4))   # False
-      print(is_prime(17))  # True
-      print(is_prime(20))  # False
+def is_prime(n: int) -> bool:
+    
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+# Examples of usage:
+print(is_prime(2))   # True
+print(is_prime(4))   # False
+print(is_prime(17))  # True
+print(is_prime(20))  # False
 
 
 2. Write a Python function `reverse_string(s: str) -> str` that takes a string and returns its  reverse. 
